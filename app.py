@@ -9,7 +9,7 @@ EXCEL_PATH = "جدول العام.xlsx"      # ← ملف Excel
 DAYS  = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس"]
 TIMES = ["8:00", "10:00", "12:00", "2:00"]
 
-#— مسارات الملفات الثابتة —#
+
 @app.route('/')
 def index():
     return send_from_directory('.', 'index.html')
