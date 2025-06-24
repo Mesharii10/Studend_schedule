@@ -1,0 +1,111 @@
+/* ——— خلفيّة الصفحة ——— */
+body {
+  background-image: url("bg.jpg");      /* ضع الصورة في نفس المجلّد */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* ——— بطاقة الإدخال “جدولي” ——— */
+.schedule-card {
+  display: flex;               /* الترتيب الطبيعي مع dir="rtl": العنوان يمين، ثم الحقل، ثم الزر */
+  align-items: center;
+  gap: 1rem;
+
+  background-color: #ffffff;
+  border: 2px solid #0A3161;   /* الأزرق الداكن */
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.card-title {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0A3161;
+  white-space: nowrap;
+}
+
+/* حقل الإدخال والزر بارتفاع موحّد */
+.schedule-card input,
+.schedule-card .btn {
+  height: 48px;
+}
+
+/* حقل الإدخال: رمادي فاتح شبيه بالصورة */
+.schedule-card input {
+  background-color: #E9ECEF;
+  border: 1px solid #CED4DA;
+  color: #333;
+  min-width: 0;                /* يتيح الانكماش داخل Flex */
+}
+
+/* زر “عرض” بدرجة الأزرق الداكن */
+.schedule-card .btn-primary {
+  background-color: #0A3161;
+  border-color:   #0A3161;
+}
+.schedule-card .btn-primary:hover,
+.schedule-card .btn-primary:focus {
+  background-color: #08244A;   /* أغمق قليلاً عند التحويم */
+  border-color:      #08244A;
+}
+
+/* ——— شبكة الجدول ——— */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-grid > div {
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  min-height: 60px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* رؤوس الأيام بنفس الأزرق */
+.day-header {
+  background-color: #0A3161;
+  color: #fff;
+  font-weight: bold;
+}
+
+.time-slot {
+  background-color: #E9ECEF;
+  font-weight: bold;
+}
+
+.class-box {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #333;
+}
+
+.class-box span {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}
+
+.student-info h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #0A3161;
+}
+
+.student-info p {
+  color: #6c757d;
+  margin: 0;
+}
